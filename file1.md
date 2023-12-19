@@ -102,3 +102,4 @@ nodeset compute osimage=centos7.7-x86_64-install-compute
 ```
 xcatprobe xcatmn -i ens36
 ```
+If all things are working properly, restart the client machine.
