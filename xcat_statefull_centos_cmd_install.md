@@ -1,13 +1,14 @@
 ### xCAT Statefull Installation of Centos 7
 Refernces :- https://github.com/openhpc/ohpc/wiki/1.3.X
 
-Install OpenHPC Repository
+Stop and Disable firewall
 ```
 systemctl stop firewalld
 ```
 ```
 systemctl disable firewalld
 ```
+Disable the selinux file
 ```
 setenforce 0
 ```
