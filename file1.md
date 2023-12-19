@@ -34,14 +34,14 @@ yum -y install yum-utils
 ```
 wget -P /etc/yum.repos.d https://xcat.org/files/xcat/repos/yum/latest/xcat-core/xcat-core.repo
 ```
-If this line gives error then use --no-check-certificate
+If the above line gives error then use --no-check-certificate
 ```
 wget -P /etc/yum.repos.d https://xcat.org/files/xcat/repos/yum/latest/xcat-core/xcat-core.repo --no-check-certificate
 ```
 ```
 wget -P /etc/yum.repos.d https://xcat.org/files/xcat/repos/yum/xcat-dep/rh7/x86_64/xcat-dep.repo
 ```
-If this line gives error then use --no-check-certificate
+If the above line gives error then use --no-check-certificate
 ```
 wget -P /etc/yum.repos.d https://xcat.org/files/xcat/repos/yum/xcat-dep/rh7/x86_64/xcat-dep.repo --no-check-certificate
 ```
