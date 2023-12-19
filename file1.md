@@ -1,3 +1,3 @@
 Credit: Atip Peethong
 
-### Install OpenHPC Repository
+Install OpenHPC Repository
