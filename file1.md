@@ -1,7 +1,3 @@
-Credit: Mithlesh Kumar
-
-Credit: Atip Peethong
-
 ### xCAT Statefull Installation of Centos 7
 Refernces :- https://github.com/openhpc/ohpc/wiki/1.3.X
 
