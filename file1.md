@@ -2,6 +2,6 @@ Credit: Mithlesh Kumar
 
 Credit: Atip Peethong
 
-# Install
+# Install this
 
 Install OpenHPC Repository
