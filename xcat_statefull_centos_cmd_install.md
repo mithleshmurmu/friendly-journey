@@ -62,7 +62,7 @@ copycds /root/CentOS-7-x86_64-DVD-1908.iso
 lsdef -t osimage
 ```
 ```
-mkdef -t node cn002 groups=compute,all ip=192.168.1.1 mac=mac-address-of-client netboot=xnba arch=x86_64
+mkdef -t node cn002 groups=compute,all ip=192.168.1.3 mac=mac-address-of-client netboot=xnba arch=x86_64
 ```
 ```
 chtab key=system passwd.username=root passwd.password=root
