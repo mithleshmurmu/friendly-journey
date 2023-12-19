@@ -22,4 +22,5 @@ hostnamectl set-hostname master.demo.lab
 ens36 (add another interface  - host only, edit it)
 IP address- 192.168.1.1  Netmask - 255.255.255.0
 ```
-
+vi /etc/hosts
+```
