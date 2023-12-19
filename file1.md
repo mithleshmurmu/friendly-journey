@@ -6,7 +6,7 @@ Credit: Atip Peethong
 
 yum -y install http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/x86_64/ohpc-release-1.3-1.el7.x86_64.rpm
 
-<b>Install OpenHPC Repository</b>
+Install OpenHPC Repository
 ```
 systemctl stop firewalld
 ```
@@ -27,7 +27,7 @@ vi /etc/hosts
 #### Add the last line only, first two line would be already exist.
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6<br>
-##### 192.168.1.1  master.demo.lab  master
+<b>192.168.1.1  master.demo.lab  master</b>
 ```
 yum -y install yum-utils
 ```
