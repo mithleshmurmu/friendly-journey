@@ -58,7 +58,7 @@ ifconfig ens36 192.168.1.1 netmask 255.255.255.0 up
 ```
 chdef -t site dhcpinterfaces="xcatmn|ens36"
 ```
-Copy the centos iso file here
+Copy the centos iso file here. If using windows machine use [scp -r centos-iso-file username@ip-address:/home/username ]
 ```
 copycds /root/CentOS-7-x86_64-DVD-1908.iso
 ```
