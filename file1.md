@@ -47,11 +47,14 @@ wget -P /etc/yum.repos.d https://xcat.org/files/xcat/repos/yum/xcat-dep/rh7/x86_
 ```
 We would use host-only interface (ens36) and provide our own IP address (192.168.1.1) and netmask (255.255.255.0) 
 ```
-ifconfig ens36 192.168.1.1 netmask 255.255.255.0 up
-```
-```
 yum -y install xCAT
 ```
 ```
 . /etc/profile.d/xcat.sh
+```
+```
+ifconfig ens36 192.168.1.1 netmask 255.255.255.0 up
+```
+```
+chdef -t site dhcpinterfaces="xcatmn|ens36"
 ```
