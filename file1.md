@@ -98,3 +98,7 @@ lsdef -t osimage
 ```
 nodeset compute osimage=centos7.7-x86_64-install-compute
 ```
+#### To check status of xcat
+```
+xcatprobe xcatmn -i ens36
+```
