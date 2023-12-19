@@ -19,7 +19,7 @@ setenforce 0
 ```
 hostnamectl set-hostname master.demo.lab
 ```
-Add another network interface host only (ens36)   (use command ```ip a``` to see) . Edit it and provide any static IP address using ```nmtui``` command
+Add another network interface host only (ens36)   (use command ```ip a``` to see) . Edit it and provide any static IP address using ```nmtui``` command.
 IP address- 192.168.1.1  Netmask - 255.255.255.0
 ```
 vi /etc/hosts
