@@ -28,3 +28,6 @@ vi /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6<br>
 192.168.1.1  master.demo.lab  master
+```
+yum -y install yum-utils
+```
