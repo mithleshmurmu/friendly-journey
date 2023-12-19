@@ -68,3 +68,33 @@ lsdef -t osimage
 ```
 mkdef -t node cn002 groups=compute,all ip=192.168.1.1 mac=mac-address-of-client netboot=xnba arch=x86_64
 ```
+```
+chtab key=system passwd.username=root passwd.password=root
+```
+```
+chdef -t site domain=demo.lab
+```
+```
+makehosts
+```
+```
+makenetworks
+```
+```
+makedhcp -n
+```
+```
+makedhcp -a
+```
+```
+makedns -n
+```
+```
+makedns -a
+```
+```
+lsdef -t osimage
+```
+```
+nodeset compute osimage=centos7.7-x86_64-install-compute
+```
