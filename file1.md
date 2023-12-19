@@ -25,6 +25,6 @@ IP address- 192.168.1.1  Netmask - 255.255.255.0
 vi /etc/hosts
 ```
 #### Add the last line only, first two line would be already exist.
-127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6<br>
 192.168.1.1  master.demo.lab  master
