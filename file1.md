@@ -8,7 +8,11 @@ yum -y install http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/x86_64/ohpc-
 
 Install OpenHPC Repository
 ```
+systemctl stop firewalld
+```
+```
 systemctl disable firewalld
 ```
-systemctl stop firewalld
+```
+setenforce 0
 ```
