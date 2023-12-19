@@ -3,8 +3,7 @@ Credit: Mithlesh Kumar
 Credit: Atip Peethong
 
 ### xCAT Statefull Installation of Centos 7
-
-yum -y install http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/x86_64/ohpc-release-1.3-1.el7.x86_64.rpm
+Refernces :- https://github.com/openhpc/ohpc/wiki/1.3.X
 
 Install OpenHPC Repository
 ```
