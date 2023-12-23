@@ -255,3 +255,4 @@ systemctl restart httpd
 systemctl restart dhcpd
 systemctl restart xinetd
 ```
+Now the start the client machine , it will start the installation from network centos 7 automatically
