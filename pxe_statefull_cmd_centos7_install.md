@@ -121,3 +121,21 @@ cp /var/pxe/centos7/images/pxeboot/initrd.img /var/lib/tftpboot/centos7/
 ```
 cp /usr/share/syslinux/menu.c32 /var/lib/tftpboot/
 ```
+```
+vi /var/lib/tftpboot/pxelinux.cfg/default
+```
+```
+# create new
+timeout 100
+default menu.c32
+
+menu title ########## PXE Boot Menu ##########
+label 1
+   menu label ^1) Install CentOS 7
+   kernel centos7/vmlinuz
+   append initrd=centos7/initrd.img method=http://172.10.1.1/centos7 devfs=nomount
+
+label 2
+   menu label ^2) Boot from local drive
+   localboot
+```
