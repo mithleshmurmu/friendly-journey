@@ -181,5 +181,5 @@ Alias /centos7 /var/pxe/centos7
 ```
 systemctl restart httpd
 ```
-Now the start the client machine , it will start the installation from network centos 7 automatically.
-```yum group list```
+Now the start the client machine , it will start the installation from network centos 7 automatically.<br>
+```# yum group list```
