@@ -99,3 +99,34 @@ yum -y install dracut-network nfs-utils
 mkdir -p /var/lib/tftpboot/centos7/root
 ```
 ```
+yum groups -y install "Minimal Installation" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
+```
+```
+python -c 'import crypt,getpass; \
+print(crypt.crypt(getpass.getpass(), \
+crypt.mksalt(crypt.METHOD_SHA512)))''
+```
+Password:root
+$6$d6Gj70RPZpc1JWiF$qCt3fqcE7HB9kXyNONs7csxsUXZfCwrQp5bTmkB5vGyqtWyDF7/TL7OgR3DVTVGMPnCT1lhdGhkkrrIOARv4q/<br>
+```
+vi /var/lib/tftpboot/centos7/root/etc/shadow
+```
+Set root password generated above
+root:$6$d6Gj70RPZpc1JWiF$qCt3fqcE7HB9kXyNONs7csxsUXZfCwrQp5bTmkB5vGyqtWyDF7/TL7OgR3DVTVGMPnCT1lhdGhkkrrIOARv4q/:18353:0:99999:7:::
+```
+vi /var/lib/tftpboot/centos7/root/etc/fstab
+```
+```
+none    /tmp        tmpfs   defaults   0 0
+tmpfs   /dev/shm    tmpfs   defaults   0 0
+sysfs   /sys        sysfs   defaults   0 0
+proc    /proc       proc    defaults   0 0
+```
+```
+wget -P /var/lib/tftpboot/centos7/ \
+http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/vmlinuz \
+http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/initrd.img
+```
+```
+vi /var/lib/tftpboot/pxelinux.cfg/default
+```
