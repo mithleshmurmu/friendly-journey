@@ -99,3 +99,13 @@ Download ISO image first to your PXE server. The following example shows the ISO
 ```
 # cp /home/mithlesh/CentOS-7-x86_64-DVD-2009.iso .
 ```
+```
+mkdir -p /var/pxe/centos7
+```
+```
+mkdir /var/lib/tftpboot/centos7
+```
+```
+# mount -t iso9660 -o loop /home/iso/CentOS-7-x86_64-DVD-1503-01.iso /var/pxe/centos7
+<b>(OR) </br>
+# mount -t iso9660 -o loop /root/CentOS-7-x86_64-DVD-2009.iso /var/pxe/centos7
