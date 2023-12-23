@@ -165,3 +165,5 @@ DirectoryIndex index.html index.cgi index.php
 # add follows to the end
 # server's response header
 ServerTokens Prod
+```
+vi /etc/httpd/conf.d/pxeboot.conf
