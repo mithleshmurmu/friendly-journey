@@ -39,3 +39,11 @@ mkdir /var/lib/tftpboot/pxelinux.cfg
 ```
 cp /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/
 ```
+```
+vi /etc/xinetd.d/tftp
+```
+```
+# line 14: change
+disable = no
+```
+
