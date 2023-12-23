@@ -91,3 +91,11 @@ next-server     172.10.1.1;
 ```
 systemctl restart dhcpd
 ```
+#### PXE Boot : Diskless Client :--
+```
+yum -y install dracut-network nfs-utils
+```
+```
+mkdir -p /var/lib/tftpboot/centos7/root
+```
+```
