@@ -166,4 +166,15 @@ DirectoryIndex index.html index.cgi index.php
 # server's response header
 ServerTokens Prod
 ```
+```
 vi /etc/httpd/conf.d/pxeboot.conf
+```
+```
+# create new
+Alias /centos7 /var/pxe/centos7
+<Directory /var/pxe/centos7>
+    Options Indexes FollowSymLinks
+    # IP address you allow to access
+    Require ip 127.0.0.1 172.10.1.0/24
+</Directory>
+```
