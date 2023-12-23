@@ -86,3 +86,6 @@ filename        "pxelinux.0";
 next-server     172.10.1.1;
 }
 ```
+```
+systemctl restart dhcpd
+```
