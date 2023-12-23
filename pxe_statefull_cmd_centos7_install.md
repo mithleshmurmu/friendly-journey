@@ -46,4 +46,7 @@ vi /etc/xinetd.d/tftp
 # line 14: change
 disable = no
 ```
-
+```
+systemctl start xinetd
+systemctl enable xinetd
+```
