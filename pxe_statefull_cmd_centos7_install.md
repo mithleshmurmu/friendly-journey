@@ -106,9 +106,9 @@ mkdir -p /var/pxe/centos7
 mkdir /var/lib/tftpboot/centos7
 ```
 ```
-# mount -t iso9660 -o loop /home/iso/CentOS-7-x86_64-DVD-1503-01.iso /var/pxe/centos7
+mount -t iso9660 -o loop /home/iso/CentOS-7-x86_64-DVD-1503-01.iso /var/pxe/centos7
 ```
-<b>(OR) </br> Select the iso file path...
+<b>(OR)</b> Select the iso file path...
 ```
-# mount -t iso9660 -o loop /root/CentOS-7-x86_64-DVD-2009.iso /var/pxe/centos7
+mount -t iso9660 -o loop /root/CentOS-7-x86_64-DVD-2009.iso /var/pxe/centos7
 ```
