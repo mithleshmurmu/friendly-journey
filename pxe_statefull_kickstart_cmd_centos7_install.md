@@ -163,3 +163,18 @@ Alias /centos7 /var/pxe/centos7
 ```
 systemctl restart httpd
 ```
+#### Kickstart Installation :-
+```
+python -c 'import crypt,getpass; \
+print(crypt.crypt(getpass.getpass(), \
+crypt.mksalt(crypt.METHOD_SHA512)))'
+```
+password:root
+$6$5IeCoTBSmhk17J4p$HBzQX8pMd7kK/f963mfPyzl/KhTDyneU6IEKvbQSNPJr2XSueE3S9VaKauGnoNixb4KncGVs3K1qPdJEYollC0
+```
+mkdir /var/www/html/ks
+```
+[Automatic partitioing ]
+```
+vi /var/www/html/ks/centos7-ks.cfg
+```
