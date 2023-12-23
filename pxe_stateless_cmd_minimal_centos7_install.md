@@ -52,3 +52,42 @@ disable = no
 systemctl start xinetd
 systemctl enable xinetd
 ```
+#### Configure DHCP Server :-
+```
+yum -y install dhcp
+```
+```
+vi /etc/dhcp/dhcpd.conf
+```
+```
+# create new
+# specify domain name
+option domain-name     "demo.lab";
+
+# specify name server's hostname or IP address
+option domain-name-servers     master.demo.lab;
+
+# default lease time
+default-lease-time 600;
+
+# max lease time
+max-lease-time 7200;
+
+# this DHCP server to be declared valid
+authoritative;
+
+# specify network address and subnet mask
+subnet 172.10.1.0 netmask 255.255.255.0 {
+    # specify the range of lease IP address
+    range dynamic-bootp 172.10.1.200 172.10.1.254;
+    # specify broadcast address
+    option broadcast-address 172.10.1.255;
+    # specify default gateway
+    option routers 172.10.1.1;
+filename        "pxelinux.0";
+next-server     172.10.1.1;
+}
+```
+```
+systemctl restart dhcpd
+```
