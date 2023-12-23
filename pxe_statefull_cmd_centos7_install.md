@@ -92,7 +92,7 @@ systemctl restart dhcpd
 #### PXE Boot : Network Install :-
 Install OS tp a client computer from PXE Server via network. It's useful if your client computer has no CD/DVD drive.
 Download ISO image first to your PXE server. The following example shows the ISO image of CentOS 7 is under /home/iso directory.
-<br> Windows Machine.
+<br> The only next command will run on Windows Machine.
 ```
 # scp -r CentOS-7-x86_64-DVD-2009.iso mithlesh@192.168.144.164:/home/mithlesh/
 ```
@@ -107,5 +107,8 @@ mkdir /var/lib/tftpboot/centos7
 ```
 ```
 # mount -t iso9660 -o loop /home/iso/CentOS-7-x86_64-DVD-1503-01.iso /var/pxe/centos7
-<b>(OR) </br>
+```
+<b>(OR) </br> Select the iso file path...
+```
 # mount -t iso9660 -o loop /root/CentOS-7-x86_64-DVD-2009.iso /var/pxe/centos7
+```
