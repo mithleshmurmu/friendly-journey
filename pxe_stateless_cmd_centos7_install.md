@@ -121,3 +121,8 @@ tmpfs   /dev/shm    tmpfs   defaults   0 0
 sysfs   /sys        sysfs   defaults   0 0
 proc    /proc       proc    defaults   0 0
 ```
+```
+wget -P /var/lib/tftpboot/centos7/ \
+http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/vmlinuz \
+http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/initrd.img
+```
