@@ -169,7 +169,7 @@ python -c 'import crypt,getpass; \
 print(crypt.crypt(getpass.getpass(), \
 crypt.mksalt(crypt.METHOD_SHA512)))'
 ```
-password:root
+password:root<br>
 $6$5IeCoTBSmhk17J4p$HBzQX8pMd7kK/f963mfPyzl/KhTDyneU6IEKvbQSNPJr2XSueE3S9VaKauGnoNixb4KncGVs3K1qPdJEYollC0
 ```
 mkdir /var/www/html/ks
@@ -177,4 +177,53 @@ mkdir /var/www/html/ks
 [Automatic partitioing ]
 ```
 vi /var/www/html/ks/centos7-ks.cfg
+```
+# create new
+
+install
+
+# automatically proceed for each steps
+autostep
+
+# reboot after installing
+reboot
+
+# encrypt algorithm
+auth --enableshadow --passalgo=sha512
+
+# installation source
+url --url=http://172.10.1.1/centos7/
+
+# install disk
+ignoredisk --only-use=sda
+
+# keyboard layouts
+keyboard --vckeymap=in-eng --xlayouts='in (eng)'
+
+# system locale
+lang en_US.UTF-8
+
+# network settings
+network --bootproto=dhcp --ipv6=auto --activate --hostname=localhost
+
+# root password you generated above
+rootpw --iscrypted $6$5IeCoTBSmhk17J4p$HBzQX8pMd7kK/f963mfPyzl/KhTDyneU6IEKvbQSNPJr2XSueE3S9VaKauGnoNixb4KncGVs3K1qPdJEYollC0
+
+# timezone
+timezone Asia/Kolkata --isUtc --nontp
+
+# bootloader's settings
+bootloader --location=mbr --boot-drive=sda
+
+# initialize all partition tables
+zerombr
+clearpart --all --initlabel
+
+# partitioning
+topart --type=plan --fstype=ext4
+
+%packages
+@^gnome-desktop
+@core
+%end
 ```
