@@ -1,4 +1,8 @@
 ### PXE Statefull kickstart Installation of Centos 7
+References :--
+<br>1.https://www.server-world.info/en/note?os=CentOS_7&p=pxe
+<br>2.https://www.server-world.info/en/note?os=CentOS_7&p=pxe&f=2
+<br>3.https://www.server-world.info/en/note?os=CentOS_7&p=pxe&f=3
 #### [Automatic partitioning ] with GUI
 Stop and Disable firewall
 ```
