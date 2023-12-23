@@ -116,7 +116,8 @@ root:$6$XjBl/xAZKGF1uiCz$9CA6.jAfWrzm.qpgeAJATv6f41dK.o9GGO3cM7.NG874og3kRGp3l9M
 vi /var/lib/tftpboot/centos7/root/etc/fstab
 ```
 ```
-/dev/shm    tmpfs   defaults   0 0
+none    /tmp        tmpfs   defaults   0 0
+tmpfs   /dev/shm    tmpfs   defaults   0 0
 sysfs   /sys        sysfs   defaults   0 0
 proc    /proc       proc    defaults   0 0
 ```
