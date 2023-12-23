@@ -228,7 +228,7 @@ autopart --type=plan --fstype=ext4
 @core
 %end
 ```
-``
+```
 chmod 644 /var/www/html/ks/centos7-ks.cfg
 ```
 ```
@@ -248,4 +248,9 @@ label 1
 label 2
    menu label ^2) Boot from local drive
    localboot
+```
+```
+systemctl restart httpd
+systemctl restart dhcpd
+systemctl restart xinetd
 ```
