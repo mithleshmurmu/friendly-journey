@@ -50,3 +50,10 @@ disable = no
 systemctl start xinetd
 systemctl enable xinetd
 ```
+#### Configure DHCP Server :-
+```
+yum -y install dhcp
+```
+```
+vi /etc/dhcp/dhcpd.conf
+```
