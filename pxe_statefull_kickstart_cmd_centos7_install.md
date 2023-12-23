@@ -1,4 +1,4 @@
-### PXE Statefull kicksatrt Installation of Centos 7
+### PXE Statefull kickstart Installation of Centos 7
 #### [Automatic partitioning ] with GUI
 Stop and Disable firewall
 ```
