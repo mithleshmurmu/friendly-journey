@@ -178,3 +178,8 @@ Alias /centos7 /var/pxe/centos7
     Require ip 127.0.0.1 172.10.1.0/24
 </Directory>
 ```
+```
+systemctl restart httpd
+```
+Now the start the client machine , it will start the installation from network centos 7 automatically.
+```yum group list```
