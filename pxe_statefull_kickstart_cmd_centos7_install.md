@@ -178,6 +178,7 @@ mkdir /var/www/html/ks
 ```
 vi /var/www/html/ks/centos7-ks.cfg
 ```
+```
 # create new
 
 install
@@ -220,7 +221,7 @@ zerombr
 clearpart --all --initlabel
 
 # partitioning
-topart --type=plan --fstype=ext4
+autopart --type=plan --fstype=ext4
 
 %packages
 @^gnome-desktop
