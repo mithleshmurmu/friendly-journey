@@ -174,7 +174,7 @@ $6$5IeCoTBSmhk17J4p$HBzQX8pMd7kK/f963mfPyzl/KhTDyneU6IEKvbQSNPJr2XSueE3S9VaKauGn
 ```
 mkdir /var/www/html/ks
 ```
-[Automatic partitioing ]
+[Automatic partitioning ]
 ```
 vi /var/www/html/ks/centos7-ks.cfg
 ```
@@ -227,4 +227,25 @@ autopart --type=plan --fstype=ext4
 @^gnome-desktop
 @core
 %end
+```
+``
+chmod 644 /var/www/html/ks/centos7-ks.cfg
+```
+```
+vi /var/lib/tftpboot/pxelinux.cfg/default
+```
+```
+# create new
+timeout 100
+default menu.c32
+
+menu title ########## PXE Boot Menu ##########
+label 1
+   menu label ^1) Install CentOS 7
+   kernel centos7/vmlinuz
+   append initrd=centos7/initrd.img ks=http://172.10.1.1/ks/centos7-ks.cfg
+
+label 2
+   menu label ^2) Boot from local drive
+   localboot
 ```
