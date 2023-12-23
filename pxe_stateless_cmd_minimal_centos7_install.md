@@ -130,3 +130,26 @@ http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/initrd.img
 ```
 vi /var/lib/tftpboot/pxelinux.cfg/default
 ```
+```
+# create new
+default centos7
+
+label centos7
+    kernel centos7/vmlinuz
+    append initrd=centos7/initrd.img root=nfs:172.10.1.1:/var/lib/tftpboot/centos7/root rw selinux=0
+```
+#### Configure NFS server :--
+```
+vi /etc/exports
+```
+```
+/var/lib/tftpboot/centos7/root 172.10.1.0/24(rw,no_root_squash)
+```
+```
+systemctl start rpcbind nfs-server
+systemctl enable rpcbind nfs-server
+```
+```
+systemctl start xinetd
+systemctl restart dhcpd
+```
