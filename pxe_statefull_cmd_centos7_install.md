@@ -23,3 +23,10 @@ vi /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6<br>
 <b>172.10.1.1  master.demo.lab  master</b>
+```
+systemctl status network
+```
+```
+systemctl restart network
+```
+### PXE Boot : Configure PXE Server :-
