@@ -1,4 +1,7 @@
 ### PXE Statefull Installation of Centos 7
+Refernces :- https://www.server-world.info/en/note?os=CentOS_7&p=pxe<br>
+https://www.server-world.info/en/note?os=CentOS_7&p=pxe&f=2
+
 Stop and Disable firewall
 ```
 systemctl stop firewalld
