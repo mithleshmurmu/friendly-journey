@@ -139,3 +139,13 @@ label 2
    menu label ^2) Boot from local drive
    localboot
 ```
+#### Apache httpd : Install httpd :-
+```
+yum install httpd
+```
+```
+rm -f /etc/httpd/conf.d/welcome.conf
+```
+```
+vi /etc/httpd/conf/httpd.conf
+```
