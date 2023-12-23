@@ -112,3 +112,12 @@ mount -t iso9660 -o loop /home/iso/CentOS-7-x86_64-DVD-1503-01.iso /var/pxe/cent
 ```
 mount -t iso9660 -o loop /root/CentOS-7-x86_64-DVD-2009.iso /var/pxe/centos7
 ```
+```
+cp /var/pxe/centos7/images/pxeboot/vmlinuz /var/lib/tftpboot/centos7/
+```
+```
+cp /var/pxe/centos7/images/pxeboot/initrd.img /var/lib/tftpboot/centos7/
+```
+```
+cp /usr/share/syslinux/menu.c32 /var/lib/tftpboot/
+```
