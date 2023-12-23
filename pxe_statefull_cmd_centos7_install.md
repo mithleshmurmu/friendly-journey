@@ -29,4 +29,13 @@ systemctl status network
 ```
 systemctl restart network
 ```
-### PXE Boot : Configure PXE Server :-
+#### PXE Boot : Configure PXE Server :-
+```
+yum -y install syslinux xinetd tftp-server
+```
+```
+mkdir /var/lib/tftpboot/pxelinux.cfg
+```
+```
+cp /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/
+```
