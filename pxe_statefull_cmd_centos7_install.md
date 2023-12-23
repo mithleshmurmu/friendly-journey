@@ -154,7 +154,7 @@ vi /etc/httpd/conf/httpd.conf
 ServerAdmin root@localhost
 
 # line 95: change to your server's name
-ServerName demo.lab🈵
+ServerName master.demo.lab:80
 
 # line 151: change
 AllowOverride All
