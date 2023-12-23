@@ -1,4 +1,5 @@
 ### PXE Statefull kicksatrt Installation of Centos 7
+#### [Automatic partitioning ] with GUI
 Stop and Disable firewall
 ```
 systemctl stop firewalld
