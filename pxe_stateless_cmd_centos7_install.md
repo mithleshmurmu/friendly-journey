@@ -90,5 +90,33 @@ next-server     172.10.1.1;
 systemctl restart dhcpd
 ```
 #### PXE Boot : Diskless Client :--
-
-
+```
+yum -y install dracut-network nfs-utils
+```
+```
+mkdir -p /var/lib/tftpboot/centos7/root
+```
+```
+yum groups -y install "Server with GUI" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
+```
+Generate encrypted root password (remember it)
+```
+python -c 'import crypt,getpass; \
+print(crypt.crypt(getpass.getpass(), \
+crypt.mksalt(crypt.METHOD_SHA512)))'
+```
+Password:root
+$6$XjBl/xAZKGF1uiCz$9CA6.jAfWrzm.qpgeAJATv6f41dK.o9GGO3cM7.NG874og3kRGp3l9Mwn38xlZSIHDyrm0WUr0lWs7AtceWrg1<br>
+```
+vi /var/lib/tftpboot/centos7/root/etc/shadow
+```
+Set root password generated above
+root:$6$XjBl/xAZKGF1uiCz$9CA6.jAfWrzm.qpgeAJATv6f41dK.o9GGO3cM7.NG874og3kRGp3l9Mwn38xlZSIHDyrm0WUr0lWs7AtceWrg1:18353:0:99999:7:::
+```
+vi /var/lib/tftpboot/centos7/root/etc/fstab
+```
+```
+/dev/shm    tmpfs   defaults   0 0
+sysfs   /sys        sysfs   defaults   0 0
+proc    /proc       proc    defaults   0 0
+```
