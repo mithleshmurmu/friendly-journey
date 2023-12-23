@@ -121,3 +121,30 @@ cp /var/pxe/centos7/images/pxeboot/initrd.img /var/lib/tftpboot/centos7/
 ```
 cp /usr/share/syslinux/menu.c32 /var/lib/tftpboot/
 ```
+#### Apache httpd : Install httpd :-
+```
+yum install httpd
+```
+```
+rm -f /etc/httpd/conf.d/welcome.conf
+```
+```
+vi /etc/httpd/conf/httpd.conf
+```
+```
+# line 86: change to admin's email address
+ServerAdmin root@localhost
+
+# line 95: change to your server's name
+ServerName master.demo.lab:80
+
+# line 151: change
+AllowOverride All
+
+# line 164: add file name that it can access only with directory's name
+DirectoryIndex index.html index.cgi index.php
+
+# add follows to the end
+# server's response header
+ServerTokens Prod
+```
