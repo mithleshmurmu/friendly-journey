@@ -102,12 +102,12 @@ yum -y install dracut-network nfs-utils
 mkdir -p /var/lib/tftpboot/centos7/root
 ```
 ```
-yum groups -y install "Minimal Installation" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
+yum groups -y install "Minimal Install" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
 ```
 ```
 python -c 'import crypt,getpass; \
 print(crypt.crypt(getpass.getpass(), \
-crypt.mksalt(crypt.METHOD_SHA512)))''
+crypt.mksalt(crypt.METHOD_SHA512)))'
 ```
 Password:root
 $6$d6Gj70RPZpc1JWiF$qCt3fqcE7HB9kXyNONs7csxsUXZfCwrQp5bTmkB5vGyqtWyDF7/TL7OgR3DVTVGMPnCT1lhdGhkkrrIOARv4q/<br>
