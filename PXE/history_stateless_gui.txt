@@ -1,0 +1,58 @@
+    1  ip a
+    2  systemctl status firewalld
+    3  systemctl stop firewalld
+    4  systemctl disable firewalld
+    5  setenforce 0
+    6  hostnamectl set-hostname master.demo.lab
+    7  hostname
+    8  vi /etc/hosts
+    9  systemctl status network
+   10  systemctl restart network
+   11  yum -y install syslinux xinetd tftp-server
+   12  mkdir /var/lib/tftpboot/pxelinux.cfg
+   13  cp /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/
+   14  vi /etc/xinetd.d/tftp
+   15  systemctl start xinetd
+   16  systemctl enable xinetd
+   17  yum -y install dhcp
+   18  vi /etc/dhcp/dhcpd.conf
+   19  systemctl restart dhcpd
+   20  yum -y install dracut-network nfs-utils
+   21  mkdir -p /var/lib/tftpboot/centos7/root
+   22  yum groups -y install "Server with GUI" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
+   23  python -c 'import crypt,getpass; \
+print(crypt.crypt(getpass.getpass(), \
+crypt.mksalt(crypt.METHOD_SHA512)))''
+   24  python -c 'import crypt,getpass; \
+print(crypt.crypt(getpass.getpass(), \
+crypt.mksalt(crypt.METHOD_SHA512)))'
+   25  vi /var/lib/tftpboot/centos7/root/etc/shadow$6$eBYW.dbQ3otq2LGR$YS06PBN4bIbQt/./y1rzf57tRClCz0ETP7ayRk60r5AGJ23bLRNdTtO7Wm2k7uLsUxtxPio9dgJh6dgf35Tm21
+   26  vi /var/lib/tftpboot/centos7/root/etc/shadow
+   27  vi /var/lib/tftpboot/centos7/root/etc/fstab
+   28  wget -P /var/lib/tftpboot/centos7/ http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/vmlinuz http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/initrd.img
+   29  vi /var/lib/tftpboot/pxelinux.cfg/default
+   30  vi /etc/exports
+   31  systemctl start rpcbind nfs-server
+   32  systemctl enable rpcbind nfs-server
+   33  systemctl start xinetd
+   34  systemctl restart dhcpd
+   35  clear
+   36  yum -y install dracut-network nfs-utils
+   37  rm -rf /var/lib/tftpboot/centos7/root
+   38  mkdir -p /var/lib/tftpboot/centos7/root
+   39  yum groups -y install "Server with GUI" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
+   40  python -c 'import crypt,getpass; \
+print(crypt.crypt(getpass.getpass(), \
+crypt.mksalt(crypt.METHOD_SHA512)))'
+   41  vi /var/lib/tftpboot/centos7/root/etc/shadow
+   42  vi /var/lib/tftpboot/centos7/root/etc/fstab
+   43  wget -P /var/lib/tftpboot/centos7/ http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/vmlinuz http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/initrd.img
+   44  vi /var/lib/tftpboot/pxelinux.cfg/default
+   45  [root@localhost ~]#
+   46  vi /etc/exports
+   47  systemctl start rpcbind nfs-server
+   48  systemctl enable rpcbind nfs-server
+   49  systemctl start xinetd
+   50  systemctl restart dhcpd
+   51  ls
+   52  history > history_stateless_gui.txt

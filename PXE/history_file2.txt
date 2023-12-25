@@ -1,0 +1,84 @@
+    1  ls
+    2  ip a
+    3  systemctl stop firewalld
+    4  systemctl disable firewalld
+    5  systemctl status firewalld
+    6  setenforce 0
+    7  getenforce
+    8  clear
+    9  ip a
+   10  vi /etc/hosts
+   11  hostname
+   12  hostnamectl
+   13  hostnamectl set-hostname master.demo.lab
+   14  hostnamectl
+   15  hostname
+   16  systemctl status network
+   17  systemctl restart network
+   18  clear
+   19  yum -y install syslinux xinetd tftp-server
+   20  mkdir /var/lib/tftpboot/pxelinux.cfg
+   21  cp /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/
+   22  vi /etc/xinetd.d/tftp
+   23  systemctl start xinetd
+   24  systemctl enable xinetd
+   25  systemctl status xinetd
+   26  yum -y install dhcp
+   27  vi /etc/dhcp/dhcpd.conf
+   28  systemctl restart dhcpd
+   29  ls
+   30  ip a
+   31  ls
+   32  mkdir -p /var/pxe/centos7
+   33  mkdir /var/lib/tftpboot/centos7
+   34  mount -t iso9660 -o loop /root/CentOS-7-x86_64-DVD-2009.iso /var/pxe/centos7
+   35  cp /var/pxe/centos7/images/pxeboot/vmlinuz /var/lib/tftpboot/centos7/
+   36  cp /var/pxe/centos7/images/pxeboot/initrd.img /var/lib/tftpboot/centos7/
+   37  cp /usr/share/syslinux/menu.c32 /var/lib/tftpboot/
+   38  vi /var/lib/tftpboot/pxelinux.cfg/default
+   39  yum install httpd
+   40  exir
+   41* 
+   42  history
+   43  yum install httpd
+   44  yum -y install httpd
+   45  rm -f /etc/httpd/conf.d/welcome.conf
+   46  vi /etc/httpd/conf/httpd.conf
+   47  yum -y install httpd
+   48  rm -f /etc/httpd/conf.d/welcome.conf
+   49  vi /etc/httpd/conf/httpd.conf
+   50  vi /etc/httpd/conf.d/pxeboot.conf
+   51  systemctl restart httpd
+   52  history_txt > history
+   53  cat history_txt > history
+   54  ls
+   55  histoy > history_file.txt
+   56  cat histoy > history_file.txt
+   57  history > history_file.txt
+   58  ls
+   59  ls /home/mithlesh/
+   60  mount -t iso9660 -o loop /home/mithlesh/CentOS-7-x86_64-DVD-2009.iso /var/pxe/centos7
+   61  cp /var/pxe/centos7/images/pxeboot/vmlinuz /var/lib/tftpboot/centos7/
+   62  cp /var/pxe/centos7/images/pxeboot/initrd.img /var/lib/tftpboot/centos7/
+   63  cp /usr/share/syslinux/menu.c32 /var/lib/tftpboot/
+   64  vi /var/lib/tftpboot/pxelinux.cfg/default
+   65  mkdir /var/lib/tftpboot/pxelinux.cfg
+   66  cp /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/
+   67  vi /etc/xinetd.d/tftp
+   68  systemctl restart xinetd
+   69  systemctl staus xinetd
+   70  systemctl status xinetd
+   71  mkdir -p /var/pxe/centos7
+   72  mkdir /var/lib/tftpboot/centos7
+   73  mount -t iso9660 -o loop /home/mithlesh/CentOS-7-x86_64-DVD-2009.iso /var/pxe/centos7 
+   74  cp /var/pxe/centos7/images/pxeboot/vmlinuz /var/lib/tftpboot/centos7/
+   75  cp /var/pxe/centos7/images/pxeboot/initrd.img /var/lib/tftpboot/centos7/
+   76  cp /usr/share/syslinux/menu.c32 /var/lib/tftpboot/
+   77  vi /var/lib/tftpboot/pxelinux.cfg/default
+   78  yum -y install httpd
+   79  rm -f /etc/httpd/conf.d/welcome.conf
+   80  vi /etc/httpd/conf/httpd.conf
+   81  vi /etc/httpd/conf.d/pxeboot.conf
+   82  systemctl restart httpd
+   83  ls
+   84  history > history_file2.txt

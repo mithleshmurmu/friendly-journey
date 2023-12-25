@@ -1,0 +1,43 @@
+    1  ls
+    2  ip a
+    3  systemctl stop firewalld
+    4  systemctl disable firewalld
+    5  setenforce 0
+    6  hostnamectl set-hostname master.demo.lab
+    7  hostname
+    8  hostnamectl
+    9  vi /etc/hosts
+   10  systemctl status network
+   11  systemctl restart network
+   12  yum -y install syslinux xinetd tftp-server
+   13  mkdir /var/lib/tftpboot/pxelinux.cfg
+   14  cp /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/
+   15  vi /etc/xinetd.d/tftp
+   16  systemctl start xinetd
+   17  systemctl enable xinetd
+   18  yum -y install dhcp
+   19  vi /etc/dhcp/dhcpd.conf
+   20  systemctl restart dhcpd
+   21  yum -y install dracut-network nfs-utils
+   22  mkdir -p /var/lib/tftpboot/centos7/root
+   23  yum groups -y install "Minimal Installation" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
+   24  python -c 'import crypt,getpass; \
+print(crypt.crypt(getpass.getpass(), \
+crypt.mksalt(crypt.METHOD_SHA512)))'
+   25  vi /var/lib/tftpboot/centos7/root/etc/shadow
+   26  vi pwd
+   27  ls
+   28  yum groups -y install "Minimal Installation" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
+   29  yum groups -y install "Minimal Install" --releasever=7 --installroot=/var/lib/tftpboot/centos7/root/
+   30  vi /var/lib/tftpboot/centos7/root/etc/shadow
+   31  cat pwd 
+   32  vi /var/lib/tftpboot/centos7/root/etc/shadow
+   33  vi /var/lib/tftpboot/centos7/root/etc/fstab
+   34  wget -P /var/lib/tftpboot/centos7/ http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/vmlinuz http://mirror.centos.org/centos/7/os/x86_64/images/pxeboot/initrd.img
+   35  vi /var/lib/tftpboot/pxelinux.cfg/default
+   36  vi /etc/exports
+   37  systemctl start rpcbind nfs-server
+   38  systemctl enable rpcbind nfs-server
+   39  systemctl start xinetd
+   40  systemctl restart dhcpd
+   41  history > history_stateless_minimal.txt
