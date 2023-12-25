@@ -108,7 +108,7 @@ Generate encrypted root password (remember it)
 ```
 python -c 'import crypt,getpass; \
 print(crypt.crypt(getpass.getpass(), \
-crypt.mksalt(crypt.METHOD_SHA512)))''
+crypt.mksalt(crypt.METHOD_SHA512)))'
 ```
 Password:root
 $6$XjBl/xAZKGF1uiCz$9CA6.jAfWrzm.qpgeAJATv6f41dK.o9GGO3cM7.NG874og3kRGp3l9Mwn38xlZSIHDyrm0WUr0lWs7AtceWrg1<br>
