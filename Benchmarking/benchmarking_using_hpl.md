@@ -120,7 +120,7 @@ vi Make.Linux_PII_CBLAS
 			# - HPL Directory Structure / HPL library ------------------------------
 			# ----------------------------------------------------------------------
 			#
-				TOPdir       = /root/Downloads/hpl-2.3
+				TOPdir       = /root/hpl-2.3
 
 		      # ----------------------------------------------------------------------
 			# - Message Passing library (MPI) --------------------------------------
@@ -141,7 +141,7 @@ vi Make.Linux_PII_CBLAS
 			# - Linear Algebra library (BLAS or VSIPL) -----------------------------
 			# ----------------------------------------------------------------------
 
-				LAlib        = $(LAdir)/libsatlas.so.3 $(LAdir)/libtatlas.so.3
+				LAlib        = /usr/lib64/atlas/libsatlas.so.3 /usr/lib64/atlas/libsatlas.so.3
 
 	>> <Escape Key> : wq
 ```
