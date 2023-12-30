@@ -108,7 +108,7 @@ Now go to hpl directory
 cd /root/hpl-2.3/
 ```
 [ ```find / -name libsatlas.so.3``` ]<br>
-copy the path and paste in the Make.Linux_PII_CBLAS file
+copy the path and paste in the Make.Linux_PII_CBLAS file<br>
 Now edit the Make.Linux_PII_CBLAS file
 ```
 vi Make.Linux_PII_CBLAS
@@ -117,7 +117,23 @@ After editing
 ```
 make arch=Linux_PII_CBLAS
 ```
-If it gives error check for error.
+If it gives error check for error.<br>
+And again run ```make arch=Linux_PII_CBLAS``` command. <br>
+Now go to Linux_PII_CBLAS directory.
+```
+cd /root/hpl-2.3/bin/Linux_PII_CBLAS/
+```
+Use ```ls``` command to see the files. <br>
+Now edit the HPL.dat file.
+```
+vi HPL.dat
+```
+Now we run the benchmark file<br>
+```-np 2``` , 2 is the number of processor of the system.
+```
+mpirun -allow-run-as-root -np 2 ./xhpl HPL.dat
+```
+
 
 
 
