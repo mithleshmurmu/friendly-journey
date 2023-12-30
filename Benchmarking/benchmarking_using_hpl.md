@@ -1,7 +1,7 @@
 ### Benchmarking using HPL(High Performance Linpack) on centos7 <br>
 [ Main File ] <br>
 It is used to check the system performance.<br>
-This benchmark is designed for following configuration<br.
+This benchmark is designed for following configuration.<br>
 [ CPU -2<br>
 RAM - 8 GB<br>
 cores per socket 1 ] <br>
@@ -165,6 +165,9 @@ Now edit the HPL.dat file.
 ```
 vi HPL.dat
 ```
+[ CPU -2<br>
+RAM - 8 GB<br>
+cores per socket 1 ] <br>
 ```
 HPLinpack benchmark input file
 Innovative Computing Laboratory, University of Tennessee
