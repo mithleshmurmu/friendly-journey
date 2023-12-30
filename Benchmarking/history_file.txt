@@ -1,0 +1,70 @@
+    1  systemctl stop firewalld
+    2  systemctl disable firewalld
+    3  setenforce 0
+    4  getenforce
+    5  exit
+    6  ip a
+    7  init 0
+    8  lscpu
+    9  lscpu -h
+   10  tree -h
+   11  init 0
+   12  lscpu
+   13  yum install epel-release -y
+   14  yum install atlas -y
+   15  rpm -ql atlas
+   16  wget https://netlib.org/benchmark/hpl/hpl-2.3.tar.gz
+   17  wget https://netlib.org/benchmark/hpl/hpl-2.3.tar.gz --no-check-certificate
+   18  tar -zxvf hpl-2.3.tar.gz
+   19  ls
+   20  ls -all
+   21  cd hpl-2.3/
+   22  ls
+   23  cd ..
+   24  wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz
+   25  ls
+   26  tar -xvf openmpi-4.1.4.tar.gz
+   27  ls
+   28  cd openmpi-4.1.4/
+   29  ls
+   30  ./configure --prefix=/opt/openmpi-4.1.4 --enable-orterun-prefix-by-default
+   31  yum groupinstall "Development Tool"
+   32  yum groupinstall "Development Tools"
+   33  ./configure --prefix=/opt/openmpi-4.1.4 --enable-orterun-prefix-by-default
+   34  make -j  8
+   35  make install
+   36  echo $PATH
+   37  export PATH=/opt/openmpi-4.1.4/bin/:$PATH
+   38  mp
+   39  ls /opt/openmpi-4.1.4/
+   40  ls /opt/openmpi-4.1.4/bin
+   41  ls /opt/openmpi-4.1.4/bin/
+   42  ls
+   43  pwd
+   44  ls /opt/openmpi-4.1.4/lib/
+   45  echo $LD_LIBRARY_PATH
+   46  export LD_LIBRARY_PATH=/opt/openmpi-4.1.4/lib/:$LD_LIBRARY_PATH
+   47  cd
+   48  ls
+   49  cd hpl-2.3/
+   50  ls
+   51  cd setup/
+   52  ls
+   53  pwd
+   54  cp Make.Linux_PII_CBLAS /root/Downloads/hpl-2.3
+   55  cp Make.Linux_PII_CBLAS /root/hpl-2.3
+   56  cd /root/hpl-2.3/
+   57  vi Ma
+   58  vi Make.Linux_PII_CBLAS 
+   59  make arch=Linux_PII_CBLAS
+   60  find / -name libsatlas.so.3
+   61  vi Make.Linux_PII_CBLAS 
+   62  make arch=Linux_PII_CBLAS
+   63  ls
+   64  pwd
+   65  cd /root/hpl-2.3/bin/Linux_PII_CBLAS/
+   66  ls
+   67  vi HPL.dat 
+   68  mpirun -allow-run-as-root -np 4 ./xhpl HPL.dat
+   69  mpirun -allow-run-as-root -np 2 ./xhpl HPL.dat
+   70  history > history_file.txt
