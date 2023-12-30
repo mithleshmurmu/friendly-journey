@@ -88,3 +88,36 @@ echo $PATH
 export PATH=/opt/openmpi-4.1.4/bin/:$PATH
 ```
 To check the files use ```ls /opt/openmpi-4.1.4/``` and ```ls /opt/openmpi-4.1.4/bin/``` ```ls /opt/openmpi-4.1.4/lib/``` commands.
+```
+echo $LD_LIBRARY_PATH
+```
+```
+export LD_LIBRARY_PATH=/opt/openmpi-4.1.4/lib/:$LD_LIBRARY_PATH
+```
+Check the files ```ls``` then go to 
+```
+cd hpl-2.3/setup/
+```
+Check the files ```ls``` <br>
+Now we copy the Make.Linux_PII_CBLAS to hpl directory
+```
+cp Make.Linux_PII_CBLAS /root/hpl-2.3
+```
+Now go to hpl directory
+```
+cd /root/hpl-2.3/
+```
+[ ```find / -name libsatlas.so.3``` ]<br>
+copy the path and paste in the Make.Linux_PII_CBLAS file
+Now edit the Make.Linux_PII_CBLAS file
+```
+vi Make.Linux_PII_CBLAS
+```
+After editing 
+```
+make arch=Linux_PII_CBLAS
+```
+If it gives error check for error.
+
+
+
