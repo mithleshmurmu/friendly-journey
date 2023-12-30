@@ -13,7 +13,6 @@ setenforce 0
 getenforce
 ```
 It should be permissive
-```
 It is used to check the status of cpu.
 ```
 lscpu
