@@ -129,7 +129,8 @@ Now edit the HPL.dat file.
 vi HPL.dat
 ```
 Now we run the benchmark file<br>
-```-np 2``` , 2 is the number of processor of the system.
+```-np 2``` , 2 is the number of processor of the system.<br>
+Modify it according to the number of processor in your system.
 ```
 mpirun -allow-run-as-root -np 2 ./xhpl HPL.dat
 ```
