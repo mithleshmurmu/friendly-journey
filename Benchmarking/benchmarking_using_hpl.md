@@ -26,7 +26,6 @@ yum install atlas -y
 ```
 To see the install rpm files
 ```
-```
 rpm -ql atlas
 ```
 ```
@@ -37,6 +36,8 @@ If it gives error use --no-check-certificate
 wget https://netlib.org/benchmark/hpl/hpl-2.3.tar.gz --no-check-certificate
 ```
 Extract the tar file
-
+```
+tar -zxvf hpl-2.3.tar.gz
+```
 
 
