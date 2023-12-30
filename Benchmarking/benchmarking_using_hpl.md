@@ -1,4 +1,4 @@
-#### Banchmarking using HPL(High Performance Linpack) on centos7
+#### Benchmarking using HPL(High Performance Linpack) on centos7
 It is used to cheeck the system performance.
 ```
 systemctl stop firewalld
@@ -87,4 +87,4 @@ echo $PATH
 ```
 export PATH=/opt/openmpi-4.1.4/bin/:$PATH
 ```
-To check the files use ```ls /opt/openmpi-4.1.4/``` and ```ls /opt/openmpi-4.1.4/bin/``` commands.
+To check the files use ```ls /opt/openmpi-4.1.4/``` and ```ls /opt/openmpi-4.1.4/bin/``` ```ls /opt/openmpi-4.1.4/lib/``` commands.
